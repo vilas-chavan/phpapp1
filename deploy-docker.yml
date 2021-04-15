@@ -1,5 +1,5 @@
 ---
-- hosts: dev
+- hosts: dev1
   become: True
   tasks:
     - name: Install python pip
