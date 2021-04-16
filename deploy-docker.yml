@@ -20,6 +20,12 @@
         name: docker-py
         state: present
     - name: login Docker hub
-      shell: docker login -u vilaschavan80 -p Vk@8149321280    
+      shell: docker login -u vilaschavan80 -p Vk@8149321280
+    - name: stop container
+      shell: docker stop phpapp1
+    - name: remove container
+      shell: docker rm phpapp1
+    - name: remove docker image
+      shell: docker rmi vilaschavan80/phpapp1      
     - name: create new container
       shell: docker run -itd --name phpapp1 -p 81:80 vilaschavan80/phpapp1
